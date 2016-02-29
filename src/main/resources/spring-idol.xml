@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+	<bean id="duke" class="com.springInAction.springIdol.Juggler">
+		<constructor-arg  value="15"/>
+	</bean>
+
+	<bean id="duke2" class="com.springInAction.springIdol.Juggler">
+		<property name="beanBags" value="12"></property>
+	</bean>
+
+	<bean id="duke3" class="com.springInAction.springIdol.Juggler" scope="prototype">
+		<property name="beanBags" value="12"></property>
+	</bean>
+	
+	<bean id="duke4" class="com.springInAction.springIdol.Juggler" scope="singleton">
+		<property name="beanBags" value="12"></property>
+	</bean>
+
+	<bean id="poeticDuke" class="com.springInAction.springIdol.PoeticJuggler">
+		<property name="poem" ref="sonnet29"></property>
+	</bean>
+	
+	<bean id="sonnet29" class="com.springInAction.springIdol.Sonnet29"></bean>
+	<bean id="sonnet30" class="com.springInAction.springIdol.Sonnet30"></bean>
+	
+
+
+</beans>
